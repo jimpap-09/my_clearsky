@@ -85,19 +85,28 @@ the footer (bottom of the page)
   }
 
   /*
+    login = link
     remove default margin and padding
-    fix the width according to link.size = text.size
-    bring text and arrow in the center
+    fix the width
     and give same bc color with navbar
   */
   .login {
     margin: 0 0;
     padding: 0 0;
-    width: fit-content;
-    display: flex;
-    align-items: center;
+    width: 90px;
     background-color: #333;
     border: none;
+  }
+
+  /*
+    link = logintext + arrow
+    put text and arrow in the center
+    and give max width = login width = 90px
+  */
+  .login a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
   /*
@@ -107,12 +116,14 @@ the footer (bottom of the page)
     flex-direction: column so dropdown-menu
     goes down from dropdown-btn
     align btn and menu in the center
+    give same width as login
   */
   .dropdown {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 90px;
   }
 
   /*

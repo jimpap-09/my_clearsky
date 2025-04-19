@@ -1,12 +1,10 @@
 import { CornerDownLeft } from 'lucide-react'
-import { useState } from 'react'
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
 import useAuth from "../../context/AuthContext"
 import DropDown from "./DropDown"
 
 export default function Navbar() {
   const {user} = useAuth()
-  const [option, setOption] = useState('');
   return (
     <nav className="navbar">
       <div className='logo-container'>
@@ -33,7 +31,7 @@ export default function Navbar() {
   )
 }
 
-function CustomLink({ to, children, ...props }) {
+function CustomLink({ to, children }) {
   const resolvedPath = useResolvedPath(to)
   const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 

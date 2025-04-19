@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import Navbar from "./components/layout/Navbar"
 import Courses from "./pages/Courses"
 import Grades from "./pages/Grades"
-import Home from "./pages/Home"
+import GradeStats from "./pages/student/GradeStats"
 import Login from "./pages/Login"
 
 import "./styles/PageLayout.css"
@@ -13,7 +13,7 @@ function App() {
       <Navbar />
       <div className="main-container">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<GradeStats />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/grades" element={<Grades />} />
           <Route path="/login" element={<Login />} />

@@ -17,7 +17,7 @@ function DropDown() {
     
     const handleSelect = async (value) => {
         setOpen(false);
-        if(value.label == "Log Out") await logout();
+        if(value.label === "Log Out") await logout();
         navigate(value.path);
     }
 
